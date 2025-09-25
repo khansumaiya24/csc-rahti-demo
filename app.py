@@ -87,6 +87,12 @@ def api_data():
         'server': socket.gethostname()
     }
     return jsonify(data)
+@app.route('/api/me')
+def api_me():
+    # A simple API endpoint that returns a JSON object with my name.
+    return {"name": "Sumaiya Khan"}
+    
+
 
 @app.errorhandler(404)
 def not_found(error):
